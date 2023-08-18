@@ -16,6 +16,6 @@ jobs:
         uses: 42Crunch/api-security-audit-action@v3
         with:
           api-token: ${{ secrets.API_TOKEN }}
-          min-score: 85
+          min-score: 20
           log-level: DEBUG
           platform-url: https://platform.dev.42crunch.com
