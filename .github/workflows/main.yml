@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Audit OpenAPI files
     steps:
+      - uses: actions/checkout@v3
       - name: 42Crunch REST API Static Security Testing
         uses: 42Crunch/api-security-audit-action@v3
         with:
