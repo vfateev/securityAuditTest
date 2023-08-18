@@ -1,0 +1,22 @@
+name: "42Crunch REST API Static Security Testing"
+
+# Run workflow each time code is pushed to your repository
+on: [push, pull_request]
+
+permissions:
+  contents: read
+  
+jobs:
+  api_audit_job:
+    runs-on: ubuntu-latest
+    name: Audit OpenAPI files
+    steps:
+      - name: 42Crunch REST API Static Security Testing
+        uses: 42Crunch/api-security-audit-action@v3
+        with:
+          api-token: ${{ secrets.API_TOKEN }}
+          min-score: 85
+          log-level: DEBUG
+          platform-url: https://platform.dev.42crunch.com
+          share-everyone: READ_ONLY
+          upload-to-code-scanning: true
