@@ -407,16 +407,7 @@ paths:
                     pattern: ^[\w\s\.\-@:,;]{1,255}$
                     type: string
       security:
-        - access-token: []  /auth/{token_id}:
-    get:
-      description: ""
-      parameters: []
-      responses:
-        "200":
-          description: "OK "
-  /name:
-    $ref: "#/paths/~1auth~1{token_id}"
-
+        - access-token: []
 components:
   schemas:
     UsersItem:
