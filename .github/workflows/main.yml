@@ -18,5 +18,3 @@ jobs:
           min-score: 85
           log-level: DEBUG
           platform-url: https://platform.dev.42crunch.com
-          share-everyone: READ_ONLY
-          upload-to-code-scanning: true
